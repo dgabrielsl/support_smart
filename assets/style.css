@@ -110,5 +110,8 @@ th{
 td{
 	border: 1px solid #000;
 }
-@media screen and (max-width: 768px){
+@media screen and (max-width: 1080px){
+	#site{
+		max-width: 90%;
+	}
 }
