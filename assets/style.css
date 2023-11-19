@@ -68,6 +68,15 @@ h3{
 		color: #00A;
 	}
 }
+.h3-foo{
+	padding: 2em 1em;
+	border-radius: 1em;
+	box-shadow:
+		-3px -3px 3px #fff,
+		inset 3px 3px 3px #fff,
+		inset -3px -3px 3px #efefef,
+		3px 3px 3px #efefef;
+}
 p{
 	margin: 1em;
 	color: #555;
@@ -79,6 +88,14 @@ ul li{
 }
 img{
 	margin: 0 1em 1em 1em;
+	box-shadow:
+		-9px 0 3px 3px #fff,
+		0 -9px 3px 3px #fff,
+		inset 9px 9px 3px 3px #fff,
+		inset -9px -9px 3px 3px #fff,
+		9px 0 3px 3px #efefef,
+		0 9px 3px 3px #efefef;
+	border-radius: 1em;
 }
 table{
 	width: 100%;
