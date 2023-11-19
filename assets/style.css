@@ -28,7 +28,7 @@ a{
 #site{
 	margin: 0 auto;
 	padding: 1em;
-	padding-bottom: 500px;
+	padding-bottom: 5em;
     max-width: 70%;
 	color: #7f7f7f;
 }
@@ -87,6 +87,7 @@ ul li{
 	list-style: square;
 }
 img{
+	max-width: calc(100% - 2em);
 	margin: 0 1em 1em 1em;
 	box-shadow:
 		-9px 0 3px 3px #fff,
@@ -108,4 +109,6 @@ th{
 }
 td{
 	border: 1px solid #000;
+}
+@media screen and (max-width: 768px){
 }
