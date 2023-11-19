@@ -24,6 +24,19 @@ html{
 }
 a{
     cursor: pointer;
+	color: #c35;
+	text-underline-position: under;
+	position: relative;
+	&:hover{
+		text-decoration: none;
+	}
+	&:hover::after{
+		content: '↗';
+		font-size: .8em;
+		position: absolute;
+		right: -1em;
+		bottom: 0;
+	}
 }
 #site{
 	margin: 0 auto;
@@ -36,36 +49,36 @@ a{
 	margin: 2em auto;
 	padding: 1.25em;
 	box-shadow:
-	-12px -12px 12px 3px #fff,
-	inset -3px -3px 3px #efefef,
-	inset -3px -3px 3px #fff,
-	12px 12px 12px 3px #efefef;
+		-12px -12px 12px 3px #fff,
+		inset -3px -3px 3px #efefef,
+		inset -3px -3px 3px #fff,
+		12px 12px 12px 3px #efefef;
 	border-radius: 5em;
+}
+h1{
+	font-size: 1.2em;
+	text-align: center;
 	&:hover{
 		color: #000;
 	}
 }
-h1{
-	max-width: 60%;
-	font-size: 1.2em;
-	text-align: center;
-}
 h2{
 	margin: 1em auto;
-	max-width: fit-content;
 	text-align: center;
+	color: #c35;
 }
 h3{
 	margin: 2em 0 1em 0;
 	padding: 1.25em 2em 1em 2em;
 	box-shadow:
-	-6px -6px 6px #fff,
-	inset -6px -6px 2px 1px #f6f7ff,
-	inset 6px 6px 2px 1px #efefef,
-	6px 6px 6px #efefef;
+		-6px -6px 6px #fff,
+		inset -6px -6px 2px 1px #f6f7ff,
+		inset 6px 6px 2px 1px #efefef,
+		6px 6px 6px #efefef;
 	border-radius: 3em;
 	&:hover{
-		color: #00A;
+		background-color: #fff	;
+		color: #c35;
 	}
 }
 .h3-foo{
@@ -98,17 +111,25 @@ img{
 		0 9px 3px 3px #efefef;
 	border-radius: 1em;
 }
-table{
-	width: 100%;
-	border: 1px solid #000;
-	border-collapse: collapse;
+#product-header{
+	margin: 2em 0;
+	padding: 1em 3em;
+	background-color: #fff;
+	box-shadow:
+		-9px 0 16px 3px #fff,
+		0 -9px 16px 3px #fff,
+		inset 5px 5px 12px #f0f0f0,
+		inset -5px -5px 12px #fafafa,
+		9px 0 12px 3px #ddd,
+		0 9px 12px 3px #ddd;
+	border-radius: 3em 5em;
+	&:hover{	
+		border-radius: 5em 3em;
+	}
 }
-th{
-	border: 1px solid #000;
-	text-align: center;
-}
-td{
-	border: 1px solid #000;
+.shortcut-key{
+	color: #c35;
+	font-weight: 600;
 }
 @media screen and (max-width: 1080px){
 	#site{
