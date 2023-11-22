@@ -14,10 +14,9 @@
 html,
 html *{
 	font-weight: 400;
-    font-size: 1em;
-	font-family: 'Josefin Sans', sans-serif;
+	font-size: 1.04em;
+	font-family: 'Mulish', sans-serif;
     transition: .3s;
-	font-size: 1em;
 }
 html{
     background-color: var(--base);
@@ -127,9 +126,9 @@ img{
 		border-radius: 5em 3em;
 	}
 }
-.shortcut-key{
+.in-out{
 	color: #c35;
-	font-weight: 600;
+	text-shadow: 0 0 5px rgba(204, 51, 84, 0.411);
 }
 @media screen and (max-width: 1080px){
 	#site{

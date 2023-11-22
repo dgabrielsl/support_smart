@@ -6,7 +6,9 @@
     <meta name="description" content="Profesional resume - Gabriel Solano L.">
     <meta name="theme-color" content="rgb(50,50,50)">
     <title>DeskPy - Docs</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Josefin+Sans:wght@200;400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="media/icon.png">
     <link rel="stylesheet" type="text/css" href="assets/style.css">
 </head>
@@ -49,20 +51,26 @@
         <h3>Manipulación de documentos</h3>
         <div class="h3-foo">
             <p>a. Nombres clave:</p>
-            <p>Entrada / Salida</p>
+            <p>*Entrada (como debe nombrarse/encontrarse en la carpeta a procesar).</p>
+            <p>*Salida (resultado generado por el programa).</p>
             <ul>
-                <li>Affidavit → KIT</li>
-                <li>Firma → FIRMA REPRESENTANTE LEGAL</li>
-                <li>Buró (buro / gente) → BURÓ</li>
-                <li>Orden1, orden2 [img/pdf] → ORDEN PATRONAL 1, 2, 3... (pdf)</li>
-                <li>Origen, origen2 [img/pdf] → ORIGEN DE FONDOS 1, 2, 3... (pdf)</li>
-                <li>id1 + id2 [img/pdf] → ID (pdf) y ID CARA 1 / ID CARA 2 (img)</li>
+                <li><span class="in-out">entrada</span> → (affidavit / aff) → <span class="in-out">salida</span> → KIT</li>
+                <li><span class="in-out">entrada</span> → firma → <span class="in-out">salida</span> → FIRMA REPRESENTANTE LEGAL</li>
+                <li><span class="in-out">entrada</span> → (buró / buro / gente / multi) → <span class="in-out">salida</span> → *</li>
+                <li><span class="in-out">entrada</span> → form → <span class="in-out">salida</span> → FORMULARIO MANUAL</li>
+                <li><span class="in-out">entrada</span> → (rep / fs) → <span class="in-out">salida</span> → REPORTE ONFIDO</li>
+                <li><span class="in-out">entrada</span> → (orden, orden1, 2, 3 [...]) → <span class="in-out">salida</span> → ORDEN PATRONAL 1, 2, 3 [...]</li>
+                <li><span class="in-out">entrada</span> → (origen, origen1, 2, 3 [...]) → <span class="in-out">salida</span> → ORIGEN DE FONDOS 1, 2, 3 [...]</li>
+                <li><span class="in-out">entrada</span> → (id1 + id2) → <span class="in-out">salida</span> → "ID CARA 1", "ID CARA 2" & "ID"</li>
+                <!-- <li><span class="in-out">entrada</span> → * → <span class="in-out">salida</span> → *</li> -->
             </ul>
-            <p>*Formatos de archivos soportados: .pdf, .png, .jpg, .jpeg, .svg, .gif, .webp, .bmp, .tif, .jfif</p>
-            <p>*Nombrar los documentos a procesar en mayúsculas/minúsculas no afecta el funcionamiento del programa.</p>
-            <p>*Otras páginas nuevas dentro del "affidavit" las guardará como "(unidentified document)".</p>
-            <p>*Si por error de la aplicación no reconoce una página, también lo guardará como "(unidentified document)", pero en ningún caso el programa omitirá guardar página(s) no reconocida(s) contenida(s) en el "affidavit".</p>
-            <p>*Cualquier página no reconocida, se guardará con la certifición de firmas incluida.</p>
+            <p>b. Formatos de archivos soportados para OCR (lectura de texto): <span class="in-out">.pdf</span></p>
+            <p>c. Formatos de archivos soportados para conversión de imágenes a PDF: <span class="in-out">.png, .jpg, .jpeg, .svg, .gif, .webp, .bmp, .tif, .jfif</span></p>
+            <p>d. Cualquier documento a excepción del "affidavit" puede guardarse en formato de imagen y se convertirá en PDF.</p>
+            <p>e. Nombrar los documentos a procesar en mayúsculas/minúsculas no afecta el funcionamiento del programa.</p>
+            <p>f. Otras páginas nuevas dentro del "affidavit" las guardará como "(unidentified document)".</p>
+            <p>j. Si por error de la aplicación no reconoce una página, también lo guardará como "(unidentified document)", pero en ningún caso el programa omitirá guardar página(s) no reconocida(s) contenida(s) en el "affidavit".</p>
+            <p>h. Cualquier página no reconocida, se guardará con la certifición de firmas incluida.</p>
         </div>
         <h3>Barra de herramientas</h3>
         <div class="h3-foo">
@@ -79,15 +87,15 @@
         <div class="h3-foo">
             <p>Accesos directos por teclado</p>
             <ul>
-                <li>Documentación → <span class="shortcut-key">F1</span> o <span class="shortcut-key">Ctrl+H</span></li>
-                <li>Buscar actualizaciones → <span class="shortcut-key">F2</span> o <span class="shortcut-key">Ctrl+U</span></li>
-                <li>Abrir directorio de trabajo → <span class="shortcut-key">F3</span> o <span class="shortcut-key">Ctrl+O</span></li>
-                <li>Seleccionar el directorio de trabajo → <span class="shortcut-key">F5</span></li>
-                <li>Leer → <span class="shortcut-key">Space</span></li>
-                <li>Procesar → <span class="shortcut-key">Enter</span></li>
-                <li>Auto → <span class="shortcut-key">Ctrl+Enter</span></li>
-                <li>Limpiar campo ID → <span class="shortcut-key">F6</span></li>
-                <li>Limpiar campo Nombre y apellidos → <span class="shortcut-key">F7</span></li>
+                <li>Documentación → <span class="in-out">F1</span> o <span class="in-out">Ctrl+H</span></li>
+                <li>Buscar actualizaciones → <span class="in-out">F2</span> o <span class="in-out">Ctrl+U</span></li>
+                <li>Abrir directorio de trabajo → <span class="in-out">F3</span> o <span class="in-out">Ctrl+O</span></li>
+                <li>Seleccionar el directorio de trabajo → <span class="in-out">F5</span></li>
+                <li>Leer → <span class="in-out">Space</span></li>
+                <li>Procesar → <span class="in-out">Enter</span></li>
+                <li>Auto → <span class="in-out">Ctrl+Enter</span></li>
+                <li>Limpiar campo ID → <span class="in-out">F6</span></li>
+                <li>Limpiar campo Nombre y apellidos → <span class="in-out">F7</span></li>
             </ul>
         </div>
     </div>
